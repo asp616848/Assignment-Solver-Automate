@@ -1,0 +1,66 @@
+// GA1 Question 1:
+// curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F "question=Install and run Visual Studio Code. In your Terminal (or Command Prompt), type code -s and press Enter. Copy and paste the entire output below.What is the output of code -s?"
+{
+    "answer":"Version: Code 1.96.2 (fabdb6a30b49f79a7aba0f2ad9df9b399473380f, 2024-12-19T10:22:47.216Z)\nOS Version: Darwin arm64 24.2.0\nCPUs: Apple M2 Pro (12 x 2400)\nMemory (System): 16.00GB (0.26GB free)\nLoad (avg): 2, 2, 3\nVM: 0%\nScreen Reader: no\nProcess Argv: --crash-reporter-id 478d798c-7073-4dcf-90b0-967f5c7ad87b\nGPU Status: 2d_canvas: enabled\n  
+ canvas_oop_rasterization: enabled_on\n  
+ direct_rendering_display_compositor: disabled_off_ok\n gpu_compositing: enabled\n multiple_raster_threads: enabled_on\n opengl: enabled_on\n rasterization:  
+ enabled\n raw_draw:  
+ disabled_off_ok\n skia_graphite:  
+ disabled_off\n video_decode:  
+ enabled\n video_encode:  
+ enabled\n webgl:  
+ enabled\n webgl2:  
+ enabled\n webgpu:  
+ enabled\n webnn:  
+ disabled_off\n\nCPU %\tMem MB\t PID\tProcess\n 0\t 180\t 23282\tcode main\n 0\t 49\t 23285\t gpu-process\n 2\t 33\t 23286\t utility-network-service\n 28\t 279\t 23287\twindow [
+        1
+    ] (binaryResearch.py — vscodeScripts)\n 15\t 131\t 23308\tshared-process\n 29\t 16\t 24376\t /Applications/Visual Studio Code.app/Contents/Resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign verify --package /Users/adityanaidu/Library/Application Support/Code/CachedExtensionVSIXs/firefox-devtools.vscode-firefox-debug-2.13.0 --signaturearchive /Users/adityanaidu/Library/Application Support/Code/CachedExtensionVSIXs/firefox-devtools.vscode-firefox-debug-2.13.0.sigzip\n 0\t 49\t 23309\tfileWatcher [
+        1
+    ]\n 4\t 459\t 23664\textensionHost [
+        1
+    ]\n 1\t 82\t 23938\t electron-nodejs (server.js )\n 0\t 229\t 23945\t electron-nodejs (bundle.js )\n 0\t 49\t 23959\t electron-nodejs (serverMain.js )\n 0\t 66\t 23665\tptyHost\n 0\t 0\t 23940\t /bin/zsh -i\n 7\t 0\t 24315\t /bin/zsh -i\n 0\t 0\t 24533\t (zsh)\n\nWorkspace Stats: \n| Window (binaryResearch.py — vscodeScripts)\n| Folder (vscodeScripts): 307 files\n| File types: py(82) js(21) txt(20) html(17) DS_Store(15) pyc(15) xml(11)\n| css(11) json(9) yml(5)\n| Conf files: settings.json(2) launch.json(1) tasks.json(1)\n| package.json(1)\n| Launch Configs: cppdbg"}
+    // GA1 Question 2:
+    //  curl -X POST "http://localhost:8000/api/" \
+    //  -H "Content-Type: multipart/form-data" \
+    //  -F "question=Running uv run --with httpie -- https [URL] installs the Python package httpie and sends a HTTPS request to the URL. Send a HTTPS request to https://httpbin.org/get with the URL encoded parameter email set to 23f2003751@ds.study.iitm.ac.in. What is the JSON output of the command? (Paste only the JSON body, not the headers)"
+    {
+        "answer": "{\n \"args\": {\n \"email\": \"23f2003751@ds.study.iitm.ac.in\"\n },\n \"headers\": {\n \"Accept\": \"_/_\",\n \"Accept-Encoding\": \"gzip, deflate\",\n \"Host\": \"httpbin.org\",\n \"User-Agent\": \"python-httpx/0.28.1\",\n \"X-Amzn-Trace-Id\": \"Root=1-67e0e49b-19cc348f24612e6b4a964cb8\"\n },\n \"origin\": \"152.58.177.70\",\n \"url\": \"https://httpbin.org/get?email=23f2003751%40ds.study.iitm.ac.in\"\n}"
+    }
+    // GA1 Question 3:
+    // curl -X POST "http://localhost:8000/api/"   -H "Content-Type: multipart/form-data"   -F "question=Download . In the directory where you downloaded it, make sure it is called README.md, and run npx -y prettier@3.4.2 README.md | sha256sum. What is the output of the command?"   -F "file=@tests\README.md"    
+    {
+        "result": "546f34cb1fbb09896491b147b86c1635ca79f4f5a91ce58882925d8fc43b3354 *-"
+    }
+    // GA1 Question 4:
+    //  curl -X POST "http://localhost:8000/api/" ^
+    //   -H "Content-Type: multipart/form-data" ^
+    //   -F "question=Let's make sure you can write formulas in Google Sheets. Type this formula into Google Sheets. (It won't work in Excel)
+    // =SUM(ARRAY_CONSTRAIN(SEQUENCE(100, 100, 5, 2), 1, 10))
+    // What is the result?"
+    {
+        "answer": "140"
+    }
+    //     GA1 Question 5:
+    //     curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F question="Type this formula into Excel.       
+    // Note: This will ONLY work in Office 365.
+    // =SUM(TAKE(SORTBY({1,10,12,4,6,8,9,13,6,15,14,15,2,13,0,3}, {10,9,13,2,11,8,16,14,7,15,5,4,6,1,3,12}), 1, 6))
+    // What is the result?"
+    {
+        "answer": "131"
+    }
+    // GA1 question 7:
+    // curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F question="How many Wednesdays are there in the date range 1986-08-06 to 2008-01-29?"
+    {
+        "answer": "1121"
+    }
+    // GA1 question 8:
+    // curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F "question=Download and unzip file q-extract-csv-zip.zip which has a single extract.csv file inside. What is the value in the 'answer' column of the CSV file?" -F "file=@tests/q-extract-csv-zip.zip"
+    {
+        "answer": "e70d8"
+    }
+    // GA1 question 9:
+    //     curl -X POST "http://localhost:8000/api/" -H "Content-Type: multipart/form-data" -F "question=Sort this JSON array of objects by the value of the age field. In case of a tie, sort by the name field. Paste the resulting JSON below without any spaces or newlines. 
+    // [{\"name\":\"Alice\",\"age\":92},{\"name\":\"Bob\",\"age\":28},{\"name\":\"Charlie\",\"age\":16},{\"name\":\"David\",\"age\":56},{\"name\":\"Emma\",\"age\":70},{\"name\":\"Frank\",\"age\":67},{\"name\":\"Grace\",\"age\":36},{\"name\":\"Henry\",\"age\":94},{\"name\":\"Ivy\",\"age\":44},{\"name\":\"Jack\",\"age\":53},{\"name\":\"Karen\",\"age\":65},{\"name\":\"Liam\",\"age\":23},{\"name\":\"Mary\",\"age\":97},{\"name\":\"Nora\",\"age\":68},{\"name\":\"Oscar\",\"age\":57},{\"name\":\"Paul\",\"age\":88}]"
+    {
+        "answer": "[{\"name\":\"Charlie\",\"age\":16},{\"name\":\"Liam\",\"age\":23},{\"name\":\"Bob\",\"age\":28},{\"name\":\"Grace\",\"age\":36},{\"name\":\"Ivy\",\"age\":44},{\"name\":\"Jack\",\"age\":53},{\"name\":\"David\",\"age\":56},{\"name\":\"Oscar\",\"age\":57},{\"name\":\"Karen\",\"age\":65},{\"name\":\"Frank\",\"age\":67},{\"name\":\"Nora\",\"age\":68},{\"name\":\"Emma\",\"age\":70},{\"name\":\"Paul\",\"age\":88},{\"name\":\"Alice\",\"age\":92},{\"name\":\"Henry\",\"age\":94},{\"name\":\"Mary\",\"age\":97}]"
+    }

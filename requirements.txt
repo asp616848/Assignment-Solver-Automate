@@ -1,0 +1,35 @@
+annotated-types==0.7.0
+anyio==4.9.0
+asyncio==3.4.3
+beautifulsoup4==4.13.3
+certifi==2025.1.31
+click==8.1.8
+colorama==0.4.6
+distro==1.9.0
+fastapi==0.115.11
+h11==0.14.0
+httpcore==1.0.7
+httpx==0.28.1
+idna==3.10
+jiter==0.9.0
+numpy==2.2.4
+openai==1.67.0
+pandas==2.2.3
+pydantic==2.10.6
+pydantic_core==2.27.2
+PyPDF2==3.0.1
+python-dateutil==2.8.2  # Added for date parsing
+python-dotenv==1.0.1
+python-multipart==0.0.9  # Added for handling form data
+pytz==2025.1
+six==1.17.0
+sniffio==1.3.1
+soupsieve==2.6
+starlette==0.46.1
+tabula-py==2.10.0
+tqdm==4.67.1
+typing_extensions==4.12.2
+tzdata==2025.1
+uvicorn==0.34.0
+zipfile36==0.1.3
+openpyxl==3.1.2  # Added for Excel file handling
