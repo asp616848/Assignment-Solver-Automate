@@ -1,25 +1,55 @@
-# IITM Assignment API
+# IIT Madras Assignment API- TDS proj 2
 
-This API automatically answers questions from graded assignments for the IIT Madras Online Degree in Data Science.
+This API automates answering questions from graded assignments in the **IIT Madras Online Degree in Data Science** program.
 
-## Setup
+## 🚀 Setup
 
-1. Clone this repository
-2. Create a virtual environment: `python -m venv venv`
-3. Activate the virtual environment:
-   - Windows: `venv\Scripts\activate`
-   - Unix/MacOS: `source venv/bin/activate`
-4. Install dependencies: `pip install -r requirements.txt`
-5. Create a `.env` file with your `AIPROXY_TOKEN`
-6. Run the server: `uvicorn app.main:app --reload`
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
 
-## Usage
+2. **Create a Virtual Environment**
+   ```bash
+   python -m venv venv
+   ```
 
-Send a POST request to the `/api/` endpoint with:
-- `question`: The assignment question
-- `file` (optional): Any file attachment needed to answer the question
+3. **Activate the Virtual Environment**
+   - Windows:  
+     ```bash
+     venv\Scripts\activate
+     ```
+   - macOS/Linux:  
+     ```bash
+     source venv/bin/activate
+     ```
 
-Example:
+4. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Set Up Environment Variables**
+   - Create a `.env` file and add the following:
+     ```plaintext
+     AIPROXY_TOKEN=your_token_here
+     ```
+
+6. **Run the Server**
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+
+## 📌 Usage
+
+Send a **POST request** to the `/api/` endpoint with the following parameters:
+
+- `question` (string, required): The assignment question.
+- `file` (optional): A file attachment, if needed to process the answer.
+
+### Example Request
+
 ```bash
 curl -X POST "http://localhost:8000/api/" \
   -H "Content-Type: multipart/form-data" \
@@ -27,13 +57,14 @@ curl -X POST "http://localhost:8000/api/" \
   -F "file=@abcd.zip"
 ```
 
-Response:
+### Example Response
+
 ```json
 {
   "answer": "1234567890"
 }
 ```
 
-## License
+## 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
